@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic16f18446-gas-leak-detector</name>
+            <name>pic16f18446-curiosity-nano-board-gas-leak-detector</name>
             <creation-uuid>5df37496-3e79-4a0b-af54-8b4fe2b0dc97</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

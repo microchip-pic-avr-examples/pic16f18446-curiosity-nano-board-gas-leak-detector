@@ -18,6 +18,10 @@ MCC configurations, Internal Oscillator and WWDT:
 * Clock Divider: 4
 * Watchdog Timer Enable: WDT Disabled, SWDTEN is ignored.
 
+The settings are presented in the figure below.
+
+<img src="images/SystemModule.png" alt="System Module"/>
+
 Timer 2 is configured to overflow every 64 milliseconds. It triggers the start of the ADCC conversion. 
 MCC configurations for TMR2:
 
@@ -28,6 +32,10 @@ MCC configurations for TMR2:
 * Timer Period: 64ms
 * Control Mode: Roll over pulse
 * Start/Reset Option: Software control
+
+The settings are presented in the figure below.
+
+<img src="images/TMR2Settings.png" alt="Timer 2 Settings"/>
 
 ADCC is used to read the gas sensors. It is configured to operate in burst average mode, to read the first sensor data that will be used as setpoint. Then the code switches the ADCC to basic mode. The ADCC uses FOSC/2 as clock source, and the conversion is triggered by TMR2. 
 MCC configurations for ADCC - Easy Setup:
@@ -40,6 +48,10 @@ MCC configurations for ADCC - Easy Setup:
 * Enable ADC Interrupt: checked
 * Enable ADC Threshold Interrupt: checked
 
+The settings are presented in the figure below.
+
+<img src="images/ADCCSettings.PNG" alt="ADCC Settings 1"/>
+
 The computation feature is configured in the ADCON3 register to calculate the difference between the actual result and a setpoint and compare the error with the upper threshold. 
 MCC configurations for ADC - Registers:
 
@@ -51,6 +63,12 @@ The number of samples to acuqire for the burst average mode is set in the ADRPT 
 
 * ADRPT: 0x20
 
+The configurated ADCC registers are presented in the figures below.
+
+<img src="images/ADCON3.PNG" alt="ADCC Settings 2"/>
+<img src="images/ADRPT.PNG" alt="ADCC Settings 3"/>
+<img src="images/ADUTH.PNG" alt="ADCC Settings 4"/>
+
 The pins are configured as follows:
 
 * ANC0 is the analog input for the CO Sensor
@@ -58,9 +76,13 @@ The pins are configured as follows:
 * ANC2 is the analog input for the LPG Sensor
 * RC6 and RC7 are configured as GPIO outputs for the piezoelectric buzzer. 
 
+The settings are presented in the figure below. 
+
+<img src="images/PinModule.PNG" alt="Pin Module Settings"/>
+
 The prototype demo is presented in the picture below.
 
-<img src="images/GasLeakDetectorSetup.jpg" alt="Hardware Setup" height="250"/>
+<img src="images/GasLeakDetectorSetup.jpg" alt="Hardware Setup" height="700"/>
 
 ## Demo Usage:
 
