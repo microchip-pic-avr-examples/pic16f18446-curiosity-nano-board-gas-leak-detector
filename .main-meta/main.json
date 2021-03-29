@@ -5,7 +5,7 @@
         "metaDataVersion": "1.0.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f18446-curiosity-nano-board-gas-leak-detector",
         "version": "1.0.2",
-        "displayName": "Gas Leak Detector",
+        "displayName": "Gas Leak Detector Using ADCC",
         "projectName": "pic16f18446-curiosity-nano-board-gas-leak-detector",
         "shortDescription": "This example uses the Burst Average mode of the ADCC to read the 3 sensors at power on, and then it uses those 3 values as setpoints. The alarm will sound if a sensor reading exceeds its setpoint by a specified value.",
         "ide": {
@@ -37,7 +37,8 @@
         "author": "Microchip",
         "subcategories": [
             [
-               "Peripherals", "ADCC"
+               "Peripherals",
+			   "ADCC"
             ]
         ],
         "peripherals": [
